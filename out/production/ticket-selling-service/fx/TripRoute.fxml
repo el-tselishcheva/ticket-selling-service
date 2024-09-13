@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+
+
+<HBox alignment="CENTER" minHeight="40.0" minWidth="460.0" prefHeight="40.0" prefWidth="568.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.TripRouteController">
+   <children>
+      <ComboBox fx:id="fromHub" minWidth="100.0" prefWidth="127.0" />
+      <Separator minWidth="20.0" orientation="VERTICAL" prefHeight="200.0" />
+      <ComboBox fx:id="toHub" minWidth="100.0" prefWidth="127.0" />
+      <Separator minWidth="20.0" orientation="VERTICAL" prefHeight="200.0" />
+      <TextField fx:id="stopTime" minWidth="100.0" prefWidth="127.0" />
+      <Separator minWidth="20.0" orientation="VERTICAL" prefHeight="200.0" />
+      <TextField fx:id="betweenHubsTime" minWidth="100.0" prefWidth="127.0" />
+   </children>
+</HBox>

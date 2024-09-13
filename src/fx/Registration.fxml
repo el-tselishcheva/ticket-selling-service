@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="360.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.RegistrationController">
+   <children>
+      <BorderPane layoutX="10.0" layoutY="10.0" prefHeight="380.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <bottom>
+            <Separator minHeight="20.0" BorderPane.alignment="CENTER" />
+         </bottom>
+         <left>
+            <Separator minWidth="20.0" orientation="VERTICAL" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <Separator minWidth="20.0" orientation="VERTICAL" BorderPane.alignment="CENTER" />
+         </right>
+         <center>
+            <VBox alignment="CENTER" prefHeight="295.0" prefWidth="520.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="65.0" prefWidth="469.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="65.0" prefWidth="120.0">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="TOP" minHeight="25.0" minWidth="50.0" text="логин" />
+                              <Separator minHeight="15.0" />
+                              <Label alignment="CENTER" minHeight="25.0" minWidth="50.0" text="пароль" />
+                           </children>
+                        </VBox>
+                        <Separator minWidth="15.0" orientation="VERTICAL" />
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="300.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <TextField fx:id="login" />
+                              <Separator minHeight="15.0" />
+                              <PasswordField fx:id="password" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <Label fx:id="loginAndPasswordErrorMessage" alignment="CENTER" contentDisplay="CENTER" minHeight="20.0" textAlignment="CENTER" textFill="RED">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Separator minHeight="20.0" />
+                  <HBox alignment="CENTER" prefHeight="60.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="146.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label alignment="CENTER" minHeight="25.0" minWidth="140.0" text="фамилия" />
+                              <TextField fx:id="surname" />
+                           </children>
+                        </VBox>
+                        <Separator minWidth="20.0" orientation="VERTICAL" />
+                        <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="146.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label alignment="CENTER" minHeight="25.0" minWidth="140.0" text="имя" />
+                              <TextField fx:id="name" />
+                           </children>
+                        </VBox>
+                        <Separator minWidth="20.0" orientation="VERTICAL" />
+                        <VBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="146.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label alignment="CENTER" minHeight="25.0" minWidth="140.0" text="отчество (при наличии)" />
+                              <TextField fx:id="patronymic" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <Separator minHeight="20.0" />
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label alignment="CENTER" minHeight="25.0" minWidth="100.0" text="дата рождения" />
+                              <DatePicker fx:id="birthdate" VBox.vgrow="ALWAYS" />
+                           </children>
+                        </VBox>
+                        <Separator minWidth="20.0" orientation="VERTICAL" />
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label alignment="CENTER" minHeight="25.0" minWidth="100.0" text="пол" />
+                              <HBox alignment="CENTER" minHeight="25.0">
+                                 <children>
+                                    <RadioButton fx:id="maleGender" minHeight="25.0" minWidth="80.0" mnemonicParsing="false" text="мужской">
+                                       <HBox.margin>
+                                          <Insets right="10.0" />
+                                       </HBox.margin>
+                                    </RadioButton>
+                                    <RadioButton fx:id="femaleGender" minHeight="25.0" minWidth="80.0" mnemonicParsing="false" text="женский">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </RadioButton>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <Separator minHeight="20.0" />
+                  <HBox alignment="CENTER" prefHeight="60.0" prefWidth="200.0">
+                     <children>
+                        <VBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="240.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <Label alignment="CENTER" minHeight="25.0" minWidth="100.0" text="телефон" />
+                              <TextField fx:id="phone" />
+                           </children>
+                        </VBox>
+                        <Separator minWidth="20.0" orientation="VERTICAL" />
+                        <VBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="240.0">
+                           <children>
+                              <Label alignment="CENTER" minHeight="25.0" minWidth="100.0" text="эл. почта" />
+                              <TextField fx:id="email" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <Label fx:id="phoneAndEmailErrorMessage" alignment="CENTER" contentDisplay="CENTER" minHeight="20.0" textAlignment="CENTER" textFill="RED">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Separator minHeight="20.0" />
+                  <Button fx:id="registration" alignment="CENTER" contentDisplay="CENTER" minHeight="25.0" minWidth="130.0" mnemonicParsing="false" onMouseClicked="#showAuthorizationWindow" text="зарегистрироваться" />
+               </children>
+            </VBox>
+         </center>
+         <top>
+            <Separator minHeight="20.0" BorderPane.alignment="CENTER" />
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

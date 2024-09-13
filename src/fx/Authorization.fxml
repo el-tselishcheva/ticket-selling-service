@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane minWidth="300.0" prefHeight="121.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AuthorizationController">
+   <children>
+      <BorderPane layoutX="69.0" layoutY="32.0" prefHeight="201.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <bottom>
+            <Separator minHeight="20.0" BorderPane.alignment="CENTER" />
+         </bottom>
+         <left>
+            <Separator minWidth="20.0" orientation="VERTICAL" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <Separator minWidth="20.0" orientation="VERTICAL" BorderPane.alignment="CENTER" />
+         </right>
+         <center>
+            <VBox alignment="CENTER" prefHeight="127.0" prefWidth="427.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="65.0" prefWidth="469.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="65.0" prefWidth="120.0">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="TOP" minHeight="25.0" minWidth="50.0" text="логин" />
+                              <Separator minHeight="15.0" />
+                              <Label alignment="CENTER" minHeight="25.0" minWidth="50.0" text="пароль" />
+                           </children>
+                        </VBox>
+                        <Separator minWidth="15.0" orientation="VERTICAL" />
+                        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="300.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <TextField fx:id="login" />
+                              <Separator minHeight="15.0" />
+                              <PasswordField fx:id="password" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <Label fx:id="errorMessage" alignment="BOTTOM_CENTER" minHeight="20.0" textFill="RED">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Separator minHeight="20.0" />
+                  <HBox alignment="CENTER" prefHeight="34.0" prefWidth="457.0">
+                     <children>
+                        <Button fx:id="authorization" alignment="CENTER" contentDisplay="TOP" minHeight="25.0" minWidth="60.0" mnemonicParsing="false" onMouseClicked="#handleAuthorization" text="войти" textAlignment="CENTER" />
+                        <Separator orientation="VERTICAL" prefHeight="30.0" prefWidth="47.0" />
+                        <Button fx:id="registration" alignment="CENTER" minHeight="25.0" minWidth="130.0" mnemonicParsing="false" onMouseClicked="#showRegistrationWindow" text="зарегистрироваться" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </center>
+         <top>
+            <Separator minHeight="20.0" BorderPane.alignment="CENTER" />
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>
